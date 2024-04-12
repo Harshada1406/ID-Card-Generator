@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Payment" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="95a1f0fb-93f6-4c4a-9d38-dc1a37727880">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     payment.`payment_id` AS payment_payment_id,
+     payment.`account_no` AS payment_account_no,
+     payment.`employee_type` AS payment_employee_type,
+     payment.`employee_id` AS payment_employee_id,
+     payment.`employee_name` AS payment_employee_name,
+     payment.`no_of_employee` AS payment_no_of_employee,
+     payment.`amount` AS payment_amount,
+     payment.`amount_of_payment` AS payment_amount_of_payment
+FROM
+     `payment` payment]]>
+	</queryString>
+	<field name="payment_payment_id" class="java.lang.Integer"/>
+	<field name="payment_account_no" class="java.lang.String"/>
+	<field name="payment_employee_type" class="java.lang.String"/>
+	<field name="payment_employee_id" class="java.lang.Integer"/>
+	<field name="payment_employee_name" class="java.lang.String"/>
+	<field name="payment_no_of_employee" class="java.lang.String"/>
+	<field name="payment_amount" class="java.lang.Integer"/>
+	<field name="payment_amount_of_payment" class="java.lang.Integer"/>
+	<group name="payment_payment_id">
+		<groupExpression><![CDATA[$F{payment_payment_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="82" splitType="Stretch">
+			<staticText>
+				<reportElement x="300" y="45" width="258" height="37" forecolor="#6666FF" uuid="1ee1f29b-231d-4e20-8c26-6d2454c2d784"/>
+				<textElement>
+					<font size="26" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Payment Details]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="15" width="448" height="20" uuid="d193de27-d378-403e-b502-4d894bdfa9de"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[ग्रामपंचायत कार्यालय  -  पाडळी                    ता.   -  शिराळा                   जि. -   सांगली]]></text>
+			</staticText>
+			<image>
+				<reportElement x="55" y="10" width="99" height="72" uuid="2fde3240-e473-4994-a84e-831935979098"/>
+				<imageExpression><![CDATA["C:\\Users\\hp\\Downloads\\name.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="42" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="28" width="802" height="1" uuid="05531f6f-da4b-4ff3-acd6-04b224a19a63"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="26" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="e2a7f046-3792-408a-8fad-73557681d049"/>
+				<text><![CDATA[Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="0" width="100" height="20" uuid="f2eb1ef7-90f3-4c0d-934d-3fcfff43a976"/>
+				<text><![CDATA[Account No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="0" width="100" height="20" uuid="80aa023b-e3a9-4a6c-a98b-77cd676b0d5e"/>
+				<text><![CDATA[Employee Type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="0" width="100" height="20" uuid="81e60480-fde8-4acb-82b5-81c64c0a6483"/>
+				<text><![CDATA[Employee Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="0" width="100" height="20" uuid="bd53feba-366d-4bc2-a8bb-7543616f0616"/>
+				<text><![CDATA[Employee Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="511" y="0" width="100" height="20" uuid="73a574ab-0d93-43cf-bf4a-050d7cbc660e"/>
+				<text><![CDATA[Total ]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="22" width="800" height="1" uuid="f6f85061-c81f-4783-9eab-3c57a534e2f7"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="42" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="20" uuid="72a9ab25-c456-4900-97ec-ea1008acdf7c"/>
+				<textFieldExpression><![CDATA[$F{payment_payment_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="0" width="100" height="20" uuid="c05ce00b-995e-49af-b2d8-f8c56bc81bfb"/>
+				<textFieldExpression><![CDATA[$F{payment_account_no}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="0" width="100" height="20" uuid="40aa5709-70bc-4cc3-bdb3-79b043080984"/>
+				<textFieldExpression><![CDATA[$F{payment_employee_type}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="0" width="100" height="20" uuid="06c481f6-1cbf-4187-b640-282b0621a038"/>
+				<textFieldExpression><![CDATA[$F{payment_employee_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="0" width="100" height="20" uuid="80185863-7431-4ea0-aeb9-7923d3c86ab5"/>
+				<textFieldExpression><![CDATA[$F{payment_employee_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="511" y="0" width="100" height="20" uuid="23ba64b6-4a65-4b10-8608-9e6fa2809799"/>
+				<textFieldExpression><![CDATA[$F{payment_amount_of_payment}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="building_connection" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="63ab8e04-ed9d-4fb1-aa93-6a59c95d23f7">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     building_connection.`building_connection_id` AS building_connection_building_connection_id,
+     building_connection.`name` AS building_connection_name,
+     building_connection.`type_of_building` AS building_connection_type_of_building,
+     building_connection.`no_of_building` AS building_connection_no_of_building,
+     building_connection.`amount` AS building_connection_amount,
+     building_connection.`total_amount` AS building_connection_total_amount,
+     building_connection.`year` AS building_connection_year
+FROM
+     `building_connection` building_connection]]>
+	</queryString>
+	<field name="building_connection_building_connection_id" class="java.lang.Integer"/>
+	<field name="building_connection_name" class="java.lang.String"/>
+	<field name="building_connection_type_of_building" class="java.lang.String"/>
+	<field name="building_connection_no_of_building" class="java.lang.Integer"/>
+	<field name="building_connection_amount" class="java.lang.Integer"/>
+	<field name="building_connection_total_amount" class="java.lang.Integer"/>
+	<field name="building_connection_year" class="java.lang.String"/>
+	<group name="building_connection_building_connection_id">
+		<groupExpression><![CDATA[$F{building_connection_building_connection_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="210" y="31" width="322" height="48" forecolor="#000033" uuid="f802de3b-71ff-42bb-b7e5-5a2fefaab603"/>
+				<textElement>
+					<font fontName="Calibri" size="30" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Building Connection]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="154" y="0" width="530" height="20" uuid="f94d59e3-b0fe-4640-8920-95a948d57da6"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[ग्रामपंचायत कार्यालय  -  पाडळी                    ता.   -  शिराळा                   जि. -   सांगली]]></text>
+			</staticText>
+			<image>
+				<reportElement x="114" y="29" width="90" height="50" uuid="560c355b-5b6c-4b1a-ab39-1ac579ad5566"/>
+				<imageExpression><![CDATA["C:\\Users\\hp\\Downloads\\name.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="22" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="21" width="798" height="1" uuid="75900844-4c37-41da-a35a-6ec2662c083c"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="41" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="140" height="20" uuid="13380861-93fa-463c-bed6-2dcdcab97d7a"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="140" y="0" width="88" height="20" uuid="bca9d2c1-23ba-4ab7-a6a8-67056269db07"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[       Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="228" y="0" width="114" height="20" uuid="7c784215-d162-440e-b108-d99929c7a21e"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Type Of Building]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="342" y="0" width="114" height="20" uuid="b2b2c9b6-816b-448f-a7c9-b1d365d111ae"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No of Building]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="456" y="0" width="114" height="20" uuid="ea0b42f5-279b-4a0c-a3f1-7e3c1eb61415"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="570" y="0" width="114" height="20" uuid="a56390c1-7dd5-418a-adc1-aee403d7dd7d"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="684" y="0" width="114" height="20" uuid="8a952b39-d5d8-4d7d-b001-ff5ab6c41389"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[          year]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="31" width="798" height="1" uuid="562ce0db-7f8c-4d05-830a-720b6e4af3eb"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="37" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="114" height="20" uuid="e5aa6cb1-4bd5-40f9-9e16-21a8e9500044"/>
+				<textFieldExpression><![CDATA[$F{building_connection_building_connection_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="140" y="0" width="88" height="20" uuid="fc402b85-30e8-4106-9c96-24f9ad8ad2e6"/>
+				<textFieldExpression><![CDATA[$F{building_connection_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="249" y="0" width="93" height="20" uuid="861bad57-03bd-4948-89cf-c8b8d3d1b41e"/>
+				<textFieldExpression><![CDATA[$F{building_connection_type_of_building}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="356" y="0" width="114" height="20" uuid="004714de-114c-4ed2-872f-299a346587c8"/>
+				<textFieldExpression><![CDATA[$F{building_connection_no_of_building}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="470" y="0" width="100" height="20" uuid="09a7af49-7536-45ac-a084-676bbbf01a50"/>
+				<textFieldExpression><![CDATA[$F{building_connection_amount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="593" y="0" width="91" height="20" uuid="837cdfc3-afa1-41fd-b6e0-0c56a8007d04"/>
+				<textFieldExpression><![CDATA[$F{building_connection_total_amount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="700" y="0" width="98" height="20" uuid="d895dc66-0eec-41d5-bf9b-a77c7df55352"/>
+				<textFieldExpression><![CDATA[$F{building_connection_year}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="DeathCerificate" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="05d9bd9d-e300-4f9a-b2b5-2b0dee416cef">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="id" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     deathcertificate.`death_certificate_id` AS deathcertificate_death_certificate_id,
+     deathcertificate.`name` AS deathcertificate_name,
+     deathcertificate.`mother_name` AS deathcertificate_mother_name,
+     deathcertificate.`father_name` AS deathcertificate_father_name,
+     deathcertificate.`death_date` AS deathcertificate_death_date,
+     deathcertificate.`death_place` AS deathcertificate_death_place,
+     deathcertificate.`address` AS deathcertificate_address
+FROM
+     `deathcertificate` deathcertificate
+where
+death_certificate_id =$P{id};]]>
+	</queryString>
+	<field name="deathcertificate_death_certificate_id" class="java.lang.Integer"/>
+	<field name="deathcertificate_name" class="java.lang.String"/>
+	<field name="deathcertificate_mother_name" class="java.lang.String"/>
+	<field name="deathcertificate_father_name" class="java.lang.String"/>
+	<field name="deathcertificate_death_date" class="java.lang.String"/>
+	<field name="deathcertificate_death_place" class="java.lang.String"/>
+	<field name="deathcertificate_address" class="java.lang.String"/>
+	<group name="deathcertificate_death_certificate_id">
+		<groupExpression><![CDATA[$F{deathcertificate_death_certificate_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="135" splitType="Stretch">
+			<staticText>
+				<reportElement x="150" y="0" width="493" height="20" uuid="3c99fd06-5d50-4b0b-bb64-b72e4cf0496f"/>
+				<text><![CDATA[   ग्रामपंचायत कार्यालय  -  पाडळी                    ता.   -  शिराळा                   जि. -   सांगली]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="217" y="30" width="238" height="49" uuid="20a86112-4606-41df-8aa2-f8c8a24317fd"/>
+				<textElement>
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[        मृत्यू प्रमाणपत्र]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="278" y="59" width="139" height="20" uuid="f31af6d9-6670-4102-92c3-3a4e8aca9467"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[(Death Certificate)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="150" y="78" width="566" height="20" uuid="6df881f3-ed5d-4c7b-96dd-98cf3664a3f3"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[जन्म व मृत्यु नोदी अधिनियम, १९६९ च्या कलम १२/१० आणि महाराष्ट्र जन्म आणि मृत्युदी नियम, २००० नियम ८/१० अन्वये देण्यात आले आहे.)
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="98" width="801" height="20" uuid="156daf1b-19bd-45a6-8d4d-b86f8383ea0c"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[(Issued under section 12:17 of the Registration of Births & Deaths Act, 1969 and Rule 8/13 of the Maharashtra Registration of Births and Deaths Rules, 2000.)]]></text>
+			</staticText>
+			<image>
+				<reportElement x="202" y="25" width="61" height="53" uuid="22b75d33-1e61-4ce2-9b70-331f84e4a6e5"/>
+				<imageExpression><![CDATA["C:\\Users\\hp\\Downloads\\name.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="260" splitType="Stretch">
+			<staticText>
+				<reportElement x="163" y="0" width="100" height="20" uuid="c58bcd06-030c-4219-bbad-92c65d1b63a8"/>
+				<text><![CDATA[Id]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="395" y="0" width="100" height="20" uuid="bdaaa89f-da9b-495d-9007-207bb0e0eaca"/>
+				<textFieldExpression><![CDATA[$F{deathcertificate_death_certificate_id}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="163" y="20" width="100" height="20" uuid="0e945b72-39e9-404e-a3c9-0e526108f404"/>
+				<text><![CDATA[Name -]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="395" y="20" width="279" height="20" uuid="f00971f7-c0e4-43cc-b858-44c41914a9b0"/>
+				<textFieldExpression><![CDATA[$F{deathcertificate_name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="163" y="40" width="100" height="20" uuid="a6fa111e-e621-48fd-8d83-412f66b51242"/>
+				<text><![CDATA[नाव ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="163" y="60" width="100" height="20" uuid="be0beab2-1390-425e-89d0-fe667ba3dacc"/>
+				<text><![CDATA[Mother Name -]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="395" y="60" width="294" height="20" uuid="93b3c98a-ae32-4ae7-9fdc-2e7b7ffe04f3"/>
+				<textFieldExpression><![CDATA[$F{deathcertificate_mother_name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="163" y="80" width="100" height="20" uuid="69c5d4e7-fe57-4eb3-9bcb-8f52327f7be2"/>
+				<text><![CDATA[आईचे नाव ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="163" y="100" width="100" height="20" uuid="b474c3d1-8efe-483c-8cce-9ea859b4e6ce"/>
+				<text><![CDATA[Father Name -]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="395" y="100" width="309" height="20" uuid="2490dbae-d669-4f3a-ba0a-70e0bc3f6498"/>
+				<textFieldExpression><![CDATA[$F{deathcertificate_father_name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="163" y="120" width="100" height="20" uuid="301d5fcd-c42f-4c08-88b3-96a94a86852a"/>
+				<text><![CDATA[वडीलांचे नावं ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="163" y="140" width="100" height="20" uuid="c7ac48c1-f8c6-4b76-8e3b-8641d859f94f"/>
+				<text><![CDATA[Death Date -]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="395" y="140" width="100" height="20" uuid="28135bc8-83df-4bf0-886a-a7203334ea81"/>
+				<textFieldExpression><![CDATA[$F{deathcertificate_death_date}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="163" y="160" width="100" height="20" uuid="e4ce20a0-b9a4-407f-97b6-1279cbb3adf1"/>
+				<text><![CDATA[मृत्यू  दिनांक ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="163" y="180" width="100" height="20" uuid="a4300d27-7f1f-41e5-80bd-c054655d2d00"/>
+				<text><![CDATA[Death Plce -]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="395" y="180" width="100" height="20" uuid="a57478d3-a367-4dba-a830-b9173c5b269f"/>
+				<textFieldExpression><![CDATA[$F{deathcertificate_death_place}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="163" y="200" width="100" height="20" uuid="8ea38326-da36-45a0-85d6-c5cbc44674b3"/>
+				<text><![CDATA[मृत्यू ठिकाण ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="163" y="220" width="100" height="20" uuid="398086ac-9057-4feb-be53-b49b58141ff0"/>
+				<text><![CDATA[Address]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="395" y="220" width="353" height="20" uuid="e09c1816-bd27-4e19-8bf4-bf7f4c535d9f"/>
+				<textFieldExpression><![CDATA[$F{deathcertificate_address}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="163" y="240" width="100" height="20" uuid="136129a7-f9a3-42c0-af7d-2b2d3a5955e7"/>
+				<text><![CDATA[पत्ता]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="495" y="13" width="100" height="20" uuid="b0be35f7-d83d-4ebc-94d2-af02ae6ba68f"/>
+				<text><![CDATA[सही]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="495" y="33" width="100" height="20" uuid="cca4b49e-3f13-45cd-aab7-845df9d84ddc"/>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

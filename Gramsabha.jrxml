@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Gramsabha" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d70da31f-cdcf-474d-9fff-5288628200c9">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     gramsabha.`gramsabha_id` AS gramsabha_gramsabha_id,
+     gramsabha.`name` AS gramsabha_name,
+     gramsabha.`reason` AS gramsabha_reason,
+     gramsabha.`date` AS gramsabha_date
+FROM
+     `gramsabha` gramsabha]]>
+	</queryString>
+	<field name="gramsabha_gramsabha_id" class="java.lang.Integer"/>
+	<field name="gramsabha_name" class="java.lang.String"/>
+	<field name="gramsabha_reason" class="java.lang.String"/>
+	<field name="gramsabha_date" class="java.lang.String"/>
+	<group name="gramsabha_gramsabha_id">
+		<groupExpression><![CDATA[$F{gramsabha_gramsabha_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="284" y="0" width="338" height="42" uuid="e742f454-6b32-4b1b-a80d-642fd75d45d0"/>
+				<textElement>
+					<font size="24"/>
+				</textElement>
+				<text><![CDATA[   ग्रामपंचायत कार्यालय पाडळी                  ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="330" y="42" width="249" height="20" uuid="da7e71af-fae9-4f8a-804e-08a8d827bda6"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[पंचायत  समिती   शिराळा जिल्हा सांगली]]></text>
+			</staticText>
+			<image>
+				<reportElement x="215" y="0" width="137" height="66" uuid="3b7b061a-280d-4af0-b6c2-7a3a89f9bfb7"/>
+				<imageExpression><![CDATA["C:\\Users\\hp\\Downloads\\name.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="75" splitType="Stretch">
+			<staticText>
+				<reportElement x="77" y="15" width="100" height="20" uuid="05cfe03d-791d-421c-82ba-444f5f81b1aa"/>
+				<text><![CDATA[प्रति,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="115" y="35" width="100" height="20" uuid="bc30d877-b53f-4a86-8610-715bd79bc895"/>
+				<text><![CDATA[सरपंच तथा  ग्रामसभा सद्यस]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="115" y="55" width="129" height="20" uuid="eaf26b77-dc2b-4d61-99f7-81b426c75b31"/>
+				<text><![CDATA[ ग्रामपंचायत कार्यालय पाडळी                  ]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="239" splitType="Stretch">
+			<staticText>
+				<reportElement x="115" y="0" width="483" height="20" uuid="a35ea601-b7e2-4a86-834f-bbc055f8ab5e"/>
+				<text><![CDATA[विषय  - दिनांक                     रोजी घेण्यात येणाऱ्या विशेष ग्रामसभेत  उपस्थित राहणेबाबत]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="77" y="20" width="100" height="20" uuid="2ce26b02-c099-4e28-8058-95280a8492f5"/>
+				<text><![CDATA[महोदय,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="150" y="40" width="529" height="20" uuid="78f92e2c-f709-4aca-bbe7-1069f90ca4be"/>
+				<text><![CDATA[दिनांक                         रोजी  ग्रामपंचायत कार्यालय पाडळी  विशेष ग्रामसभ  आयोजित करण्यात आली आहे. तरी सभेला उपस्थीत रहावे ही विनंती.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="482" y="84" width="153" height="20" uuid="e829d834-ab76-48cb-ae14-0f359bfaea1a"/>
+				<text><![CDATA[सभेचा दिनांक वेळ-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="482" y="104" width="100" height="20" uuid="b21ea421-ba95-4a5b-8345-bc821bcd9815"/>
+				<text><![CDATA[सभेचे ठिकाण -]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="545" y="104" width="100" height="20" uuid="2359ff77-9ba6-4b89-9516-fa0f9150d3ad"/>
+				<text><![CDATA[ ग्रामपंचायत कार्यालय पाडळी                  ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="99" y="136" width="100" height="20" uuid="be58fa17-a4de-405c-bb72-be75684d7c4e"/>
+				<text><![CDATA[सभेचे विषयपत्रिका]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="177" y="0" width="59" height="20" uuid="cbcaf9e1-de93-42a6-ab2f-8ef7c666a9f0"/>
+				<textFieldExpression><![CDATA[$F{gramsabha_date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="177" y="40" width="73" height="20" uuid="33832a94-e084-4e74-b49d-a416c0f6e574"/>
+				<textFieldExpression><![CDATA[$F{gramsabha_date}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="579" y="187" width="100" height="20" uuid="d3e454d3-a7f2-46ae-ad53-564b687869d7"/>
+				<text><![CDATA[सही]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="579" y="207" width="100" height="20" uuid="d28e2ca6-daf0-4129-9098-d9d787607b96"/>
+				<text><![CDATA[शिक्का]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="177" y="170" width="341" height="20" uuid="55c6507d-00e3-4b7e-b0de-1367f2f64cca"/>
+				<textFieldExpression><![CDATA[$F{gramsabha_reason}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="142" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
