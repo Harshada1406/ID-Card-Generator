@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="NameWise" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a9645a8c-a7d4-4e8f-bb20-795ca8b1efea">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="name" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     brithcertificate.`brith_certificate_id` AS brithcertificate_brith_certificate_id,
+     brithcertificate.`name` AS brithcertificate_name,
+     brithcertificate.`mother_name` AS brithcertificate_mother_name,
+     brithcertificate.`father_name` AS brithcertificate_father_name,
+     brithcertificate.`brith_date` AS brithcertificate_brith_date,
+     brithcertificate.`brith_place` AS brithcertificate_brith_place,
+     brithcertificate.`address` AS brithcertificate_address,
+     brithcertificate.`religion` AS brithcertificate_religion
+FROM
+     `brithcertificate` brithcertificate
+where
+name=$P{name};
+]]>
+	</queryString>
+	<field name="brithcertificate_brith_certificate_id" class="java.lang.Integer"/>
+	<field name="brithcertificate_name" class="java.lang.String"/>
+	<field name="brithcertificate_mother_name" class="java.lang.String"/>
+	<field name="brithcertificate_father_name" class="java.lang.String"/>
+	<field name="brithcertificate_brith_date" class="java.lang.String"/>
+	<field name="brithcertificate_brith_place" class="java.lang.String"/>
+	<field name="brithcertificate_address" class="java.lang.String"/>
+	<field name="brithcertificate_religion" class="java.lang.String"/>
+	<group name="brithcertificate_brith_certificate_id">
+		<groupExpression><![CDATA[$F{brithcertificate_brith_certificate_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="61d5a59a-5a15-43b8-8781-03f7a92d8404"/>
+				<text><![CDATA[brithcertificate_brith_certificate_id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="0" width="100" height="20" uuid="4c0fe875-9892-4d22-b2be-81a946ad077e"/>
+				<text><![CDATA[brithcertificate_name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="0" width="100" height="20" uuid="27af7a95-a9c6-4df7-831a-1da6313aa599"/>
+				<text><![CDATA[brithcertificate_mother_name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="0" width="100" height="20" uuid="00dc8118-783d-4488-8924-c196012f10a8"/>
+				<text><![CDATA[brithcertificate_father_name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="0" width="100" height="20" uuid="3484ce93-8981-4c22-a49e-4bed107df14d"/>
+				<text><![CDATA[brithcertificate_brith_date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="500" y="0" width="100" height="20" uuid="0e189c93-5431-460c-bfc6-675782c1296f"/>
+				<text><![CDATA[brithcertificate_brith_place]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="600" y="0" width="100" height="20" uuid="8cf4f7e1-b09c-45fc-be9c-9123126c5b71"/>
+				<text><![CDATA[brithcertificate_address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="700" y="0" width="100" height="20" uuid="e680a994-bbde-4e39-8241-ec4be8c1c5b1"/>
+				<text><![CDATA[brithcertificate_religion]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="20" uuid="045ebf4e-b780-405d-9135-5044e9ccd5e4"/>
+				<textFieldExpression><![CDATA[$F{brithcertificate_brith_certificate_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="0" width="100" height="20" uuid="d4454339-1802-4da9-a5aa-4a9b84d08e84"/>
+				<textFieldExpression><![CDATA[$F{brithcertificate_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="0" width="100" height="20" uuid="e3f4a949-8127-4a66-9697-e9e196b10455"/>
+				<textFieldExpression><![CDATA[$F{brithcertificate_mother_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="0" width="100" height="20" uuid="f3fe454f-7658-4b00-b34b-f28db6c6dd11"/>
+				<textFieldExpression><![CDATA[$F{brithcertificate_father_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="0" width="100" height="20" uuid="a3a3cc01-be6d-4342-89d8-7f84b746812c"/>
+				<textFieldExpression><![CDATA[$F{brithcertificate_brith_date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="500" y="0" width="100" height="20" uuid="70209f7b-d9b8-41e9-8c41-26f4ca4e528b"/>
+				<textFieldExpression><![CDATA[$F{brithcertificate_brith_place}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="600" y="0" width="100" height="20" uuid="8cd912f4-d20a-4443-b1ff-aa305e50361e"/>
+				<textFieldExpression><![CDATA[$F{brithcertificate_address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="700" y="0" width="100" height="20" uuid="2088fbea-23bb-4559-a565-d6848902e535"/>
+				<textFieldExpression><![CDATA[$F{brithcertificate_religion}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

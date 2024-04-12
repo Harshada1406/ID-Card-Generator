@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="population" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ebd2d9d5-6227-4168-9660-06a7fad4eb13">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     population.`population_id` AS population_population_id,
+     population.`person_name` AS population_person_name,
+     population.`person_age` AS population_person_age,
+     population.`caste` AS population_caste,
+     population.`gender` AS population_gender
+FROM
+     `population` population]]>
+	</queryString>
+	<field name="population_population_id" class="java.lang.Integer"/>
+	<field name="population_person_name" class="java.lang.String"/>
+	<field name="population_person_age" class="java.lang.String"/>
+	<field name="population_caste" class="java.lang.String"/>
+	<field name="population_gender" class="java.lang.String"/>
+	<group name="population_population_id">
+		<groupExpression><![CDATA[$F{population_population_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="320" y="29" width="254" height="39" forecolor="#0000CC" uuid="d290938a-a990-423a-8605-9ac85a8aa17f"/>
+				<textElement>
+					<font size="24" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Population]]></text>
+			</staticText>
+			<line>
+				<reportElement x="295" y="55" width="185" height="1" forecolor="#990099" uuid="0fddc858-53fd-416a-adac-0979e4872b47"/>
+			</line>
+			<staticText>
+				<reportElement x="225" y="0" width="355" height="20" uuid="9a5eabca-5c48-4168-9f35-a8a1a998599e"/>
+				<text><![CDATA[ग्रामपंचायत कार्यालय  -  पाडळी                    ता.   -  शिराळा                   जि. -   सांगली]]></text>
+			</staticText>
+			<image>
+				<reportElement x="130" y="-6" width="95" height="85" uuid="9b02415d-abf4-4212-aa7a-403489f9b408"/>
+				<imageExpression><![CDATA["C:\\Users\\hp\\Downloads\\name.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="22" width="800" height="1" uuid="ef07be6e-0704-4080-b883-86582b427341"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="39" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="160" height="20" uuid="4890d94e-d844-4079-a649-610d06070b89"/>
+				<text><![CDATA[Population Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="160" y="0" width="160" height="20" uuid="37bef760-eda8-4f94-ac3f-777c0c797306"/>
+				<text><![CDATA[Person Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="320" y="0" width="160" height="20" uuid="71143216-0a42-4e33-9414-714e48736bd4"/>
+				<text><![CDATA[Person age]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="480" y="0" width="160" height="20" uuid="402de4ab-d38e-48b7-80a3-71f202e1c38f"/>
+				<text><![CDATA[Prson Cast]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="640" y="0" width="160" height="20" uuid="c11c34b2-b445-4c63-b27e-8982af012e21"/>
+				<text><![CDATA[Gender]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="20" width="800" height="1" uuid="00ea970d-41d2-4ad9-b218-3e58db64cb19"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="160" height="20" uuid="aa776049-186f-477b-910e-0647d3aabda9"/>
+				<textFieldExpression><![CDATA[$F{population_population_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="160" y="0" width="160" height="20" uuid="2135842d-c2e5-4b43-92b9-1d29b945e733"/>
+				<textFieldExpression><![CDATA[$F{population_person_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="0" width="160" height="20" uuid="d2f7af35-7df7-4558-9255-33bf3699e123"/>
+				<textFieldExpression><![CDATA[$F{population_person_age}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="480" y="0" width="160" height="20" uuid="fdab64d7-a354-4806-95ea-f89d64113dfa"/>
+				<textFieldExpression><![CDATA[$F{population_caste}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="640" y="0" width="160" height="20" uuid="83a9eafe-e4a5-4161-b4d5-ea4faf4594cb"/>
+				<textFieldExpression><![CDATA[$F{population_gender}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

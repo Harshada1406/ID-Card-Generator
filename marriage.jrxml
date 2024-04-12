@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="marriage" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2a83a2f8-dd5a-40a5-b531-3d11a3b1836d">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="id" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     marriage_certificate.`register_id` AS marriage_certificate_register_id,
+     marriage_certificate.`husband_name` AS marriage_certificate_husband_name,
+     marriage_certificate.`adhar_no` AS marriage_certificate_adhar_no,
+     marriage_certificate.`wife_name` AS marriage_certificate_wife_name,
+     marriage_certificate.`adhar_no1` AS marriage_certificate_adhar_no1,
+     marriage_certificate.`marriage_date` AS marriage_certificate_marriage_date,
+     marriage_certificate.`marriage_place` AS marriage_certificate_marriage_place,
+     marriage_certificate.`register_date` AS marriage_certificate_register_date,
+     marriage_certificate.`document` AS marriage_certificate_document
+FROM
+     `marriage_certificate` marriage_certificate
+where
+register_id = $P{id};]]>
+	</queryString>
+	<field name="marriage_certificate_register_id" class="java.lang.Integer"/>
+	<field name="marriage_certificate_husband_name" class="java.lang.String"/>
+	<field name="marriage_certificate_adhar_no" class="java.lang.Long"/>
+	<field name="marriage_certificate_wife_name" class="java.lang.String"/>
+	<field name="marriage_certificate_adhar_no1" class="java.lang.Long"/>
+	<field name="marriage_certificate_marriage_date" class="java.lang.String"/>
+	<field name="marriage_certificate_marriage_place" class="java.lang.String"/>
+	<field name="marriage_certificate_register_date" class="java.lang.String"/>
+	<field name="marriage_certificate_document" class="java.lang.String"/>
+	<group name="marriage_certificate_register_id">
+		<groupExpression><![CDATA[$F{marriage_certificate_register_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="111" splitType="Stretch">
+			<staticText>
+				<reportElement x="344" y="11" width="228" height="44" uuid="c282aa79-b9fa-4699-bad2-063f780a1368"/>
+				<textElement>
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[विवाह नोंदणी प्रमाणपत्र
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="326" y="44" width="246" height="23" uuid="db685afa-e5db-4111-a73f-2a5834cc5d23"/>
+				<text><![CDATA[CERTIFICATE OF REGISTRATION OF MARRIAGE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="392" y="67" width="122" height="20" uuid="04bed955-e8ad-4e11-838b-7efbcfec5a1b"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[{कलम 6(1) आणि नियम 5}]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="371" y="87" width="162" height="20" uuid="750a065d-e3f5-41bc-988d-8b287e9537f7"/>
+				<text><![CDATA[(See Section 6(1) and Rule 5)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="253" y="0" width="373" height="20" uuid="85a25758-80f2-446d-843e-0f29e145d7b1"/>
+				<text><![CDATA[   ग्रामपंचायत कार्यालय  -  पाडळी                    ता.   -  शिराळा                   जि. -   सांगली]]></text>
+			</staticText>
+			<image>
+				<reportElement x="243" y="20" width="101" height="68" uuid="1cd17aa5-ab0a-4c70-bc7f-1109d6b8cb3b"/>
+				<imageExpression><![CDATA["C:\\Users\\hp\\Downloads\\name.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="5" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="326" splitType="Stretch">
+			<staticText>
+				<reportElement x="271" y="50" width="100" height="20" uuid="99da7db8-9441-4ca8-b49a-4755c9e11198"/>
+				<text><![CDATA[Husband Name]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="489" y="50" width="208" height="20" uuid="3b3dab14-2410-461f-bd05-41ff82b4e324"/>
+				<textFieldExpression><![CDATA[$F{marriage_certificate_husband_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="489" y="2" width="259" height="20" uuid="5e5e13c7-48f5-4f5b-99e3-96755993dcc8"/>
+				<textFieldExpression><![CDATA[$F{marriage_certificate_register_date}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="271" y="98" width="100" height="20" uuid="b17c3034-9450-42f0-9591-367ec269606d"/>
+				<text><![CDATA[Adhar No]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="489" y="98" width="208" height="20" uuid="92e821ce-ed20-4cb6-8d72-e1f92f3a7853"/>
+				<textFieldExpression><![CDATA[$F{marriage_certificate_adhar_no}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="271" y="150" width="100" height="20" uuid="c9267fc6-a2d0-498d-a07b-e3e5c345d40b"/>
+				<text><![CDATA[Wife Name]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="489" y="150" width="208" height="20" uuid="b05f208a-ac24-4805-a71f-757170698c32"/>
+				<textFieldExpression><![CDATA[$F{marriage_certificate_wife_name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="271" y="197" width="100" height="20" uuid="99c2072c-2455-487b-9204-43c6ad21a9b8"/>
+				<text><![CDATA[Adhar No]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="489" y="197" width="208" height="20" uuid="d84b9c41-81c2-4bb1-b4d9-bc4aadf4fd30"/>
+				<textFieldExpression><![CDATA[$F{marriage_certificate_adhar_no1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="271" y="242" width="100" height="20" uuid="925fe0e5-6c71-4a54-8097-3c2e258408a8"/>
+				<text><![CDATA[Marraige Date]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="489" y="242" width="208" height="20" uuid="f19ac9cd-f490-4214-9101-16242f32396d"/>
+				<textFieldExpression><![CDATA[$F{marriage_certificate_marriage_date}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="271" y="2" width="100" height="20" uuid="21c8b30c-6f6a-4d5c-b979-6924d4a52d95"/>
+				<text><![CDATA[Register Date]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="489" y="276" width="218" height="20" uuid="aa442f0d-7272-4646-ba16-4f54000fda88"/>
+				<textFieldExpression><![CDATA[$F{marriage_certificate_marriage_place}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="271" y="276" width="100" height="20" uuid="077af35e-622c-466b-9e6a-5872f8c966bc"/>
+				<text><![CDATA[Marriage Place]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="271" y="22" width="100" height="20" uuid="f795b919-5ca1-4022-86e0-0691d65f5412"/>
+				<text><![CDATA[विवाह नोंदणी क्र.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="271" y="70" width="100" height="20" uuid="6bda6b0b-27d6-4ace-b447-60c49086439f"/>
+				<text><![CDATA[पतीचे नाव]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="271" y="118" width="100" height="20" uuid="e19b3402-f51c-4f12-b0a9-2e9b41e1562a"/>
+				<text><![CDATA[आधार नंबर]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="271" y="170" width="100" height="20" uuid="e7cbe96b-8a85-45c4-a019-b1b0245cc8f0"/>
+				<text><![CDATA[पत्नीचे नाव]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="271" y="217" width="100" height="20" uuid="856394e8-0fc2-4e94-be59-b3141be25711"/>
+				<text><![CDATA[आधार नंबर]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="271" y="256" width="100" height="20" uuid="95b44f99-1bd7-4f52-9fbe-2acaff5db73c"/>
+				<text><![CDATA[लग्नाची तारीख]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="271" y="296" width="100" height="20" uuid="41118bc9-6fa2-4a8e-bd2f-5f7eb3bffdcd"/>
+				<text><![CDATA[लग्नाचे ठिकाण]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="607" y="306" width="100" height="20" uuid="54c83d4e-f7f2-4b27-9424-ef76550c8af4"/>
+				<text><![CDATA[सही  शिक्का]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

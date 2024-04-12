@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Brith_Certificate" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a6a8fd44-9dfc-4fd6-b6d0-6ecc27935230">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="id" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     brithcertificate.`brith_certificate_id` AS brithcertificate_brith_certificate_id,
+     brithcertificate.`name` AS brithcertificate_name,
+     brithcertificate.`mother_name` AS brithcertificate_mother_name,
+     brithcertificate.`father_name` AS brithcertificate_father_name,
+     brithcertificate.`brith_date` AS brithcertificate_brith_date,
+     brithcertificate.`brith_place` AS brithcertificate_brith_place,
+     brithcertificate.`address` AS brithcertificate_address,
+     brithcertificate.`religion` AS brithcertificate_religion
+FROM
+     `brithcertificate` brithcertificate
+
+where
+brith_certificate_id = $P{id};
+]]>
+	</queryString>
+	<field name="brithcertificate_brith_certificate_id" class="java.lang.Integer"/>
+	<field name="brithcertificate_name" class="java.lang.String"/>
+	<field name="brithcertificate_mother_name" class="java.lang.String"/>
+	<field name="brithcertificate_father_name" class="java.lang.String"/>
+	<field name="brithcertificate_brith_date" class="java.lang.String"/>
+	<field name="brithcertificate_brith_place" class="java.lang.String"/>
+	<field name="brithcertificate_address" class="java.lang.String"/>
+	<field name="brithcertificate_religion" class="java.lang.String"/>
+	<group name="brithcertificate_brith_certificate_id">
+		<groupExpression><![CDATA[$F{brithcertificate_brith_certificate_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="145" splitType="Stretch">
+			<staticText>
+				<reportElement x="211" y="0" width="308" height="51" uuid="03de0767-2ab4-4e22-8f87-cbeead4c22b8"/>
+				<textElement>
+					<font size="36"/>
+				</textElement>
+				<text><![CDATA[        जन्म प्रमाणपत्र]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="69" y="61" width="631" height="21" uuid="1dce4d0b-ad8b-42fc-9173-76a7a8008498"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[जन्म व मृत्यु नोदी अधिनियम, १९६९ च्या कलम १२/१० आणि महाराष्ट्र जन्म आणि मृत्युदी नियम, २००० नियम ८/१० अन्वये देण्यात आले आहे.)
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="327" y="41" width="129" height="20" uuid="d851ec32-819b-4087-85a1-c1122da019c1"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[(Birth Certificate)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="194" y="-10" width="591" height="26" uuid="16feaab3-55ae-419a-b575-0cbb1faba1bd"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[   ग्रामपंचायत कार्यालय  -  पाडळी                    ता.   -  शिराळा                   जि. -   सांगली]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="69" y="82" width="716" height="14" uuid="6349acb1-d063-4159-bec2-c3cc49c15cb1"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[(Issued under section 12:17 of the Registration of Births & Deaths Act, 1969 and Rule 8/13 of the Maharashtra Registration of Births and Deaths Rules, 2000.)]]></text>
+			</staticText>
+			<image>
+				<reportElement x="103" y="-10" width="108" height="70" uuid="031c52bf-6122-44bf-9d72-2647887b13fb"/>
+				<imageExpression><![CDATA["C:\\Users\\hp\\Downloads\\name.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="26" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="16" width="802" height="1" uuid="b953cb34-c469-49d7-baab-204f4baa21d2"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="285" splitType="Stretch">
+			<staticText>
+				<reportElement x="227" y="0" width="100" height="20" uuid="218f5807-e935-404b-8b02-9e91980858ca"/>
+				<text><![CDATA[Id    -]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="441" y="2" width="100" height="20" uuid="77f1979f-e92a-4125-976a-6c4ee6353b96"/>
+				<textFieldExpression><![CDATA[$F{brithcertificate_brith_certificate_id}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="227" y="32" width="100" height="20" uuid="f1772208-1ede-4737-9ad4-8f388e175956"/>
+				<text><![CDATA[Name      -]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="441" y="32" width="100" height="20" uuid="8e85a02a-1a60-4fc2-858c-a4148cd3134f"/>
+				<textFieldExpression><![CDATA[$F{brithcertificate_name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="227" y="64" width="100" height="20" uuid="71f440f3-df68-4439-8aa5-1fad4f1243a6"/>
+				<text><![CDATA[Mother Name     -]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="441" y="64" width="100" height="20" uuid="da16b04d-f743-479d-bf3a-62b531bbd2c2"/>
+				<textFieldExpression><![CDATA[$F{brithcertificate_mother_name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="227" y="94" width="100" height="20" uuid="dd0980f8-1b8c-4c04-a4e5-b5e9712611b9"/>
+				<text><![CDATA[Father Name      -]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="441" y="94" width="100" height="20" uuid="5a3ec5cc-5c6a-40f6-892d-fef1946b9b65"/>
+				<textFieldExpression><![CDATA[$F{brithcertificate_father_name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="227" y="125" width="100" height="20" uuid="cae298b1-b925-4512-9f4f-3d79156f9a60"/>
+				<text><![CDATA[Brith Date       -]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="441" y="125" width="100" height="20" uuid="1c95f417-9ede-499d-a9e0-9eb6f593e4b0"/>
+				<textFieldExpression><![CDATA[$F{brithcertificate_brith_date}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="227" y="157" width="100" height="20" uuid="93c84385-1a0f-4976-87cc-58f7c991d68d"/>
+				<text><![CDATA[Brith Place       -]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="441" y="157" width="100" height="20" uuid="6bd44c10-91c6-4fba-941e-d1f5e4cc838b"/>
+				<textFieldExpression><![CDATA[$F{brithcertificate_brith_place}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="227" y="188" width="100" height="20" uuid="6b94d936-993b-4aa1-b0d6-b024eb49d81b"/>
+				<text><![CDATA[Address          -]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="441" y="188" width="100" height="20" uuid="abe38879-8524-475d-9b18-8548286e6533"/>
+				<textFieldExpression><![CDATA[$F{brithcertificate_address}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="227" y="222" width="100" height="20" uuid="ddae016a-0bb1-452c-a269-5c6b8eae384c"/>
+				<text><![CDATA[Religion         -]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="441" y="222" width="100" height="20" uuid="d4f5a237-3942-4d02-8772-d491780ac923"/>
+				<textFieldExpression><![CDATA[$F{brithcertificate_religion}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="560" y="245" width="100" height="20" uuid="c6241fe3-1397-4724-ac9e-13877aa79c7a"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[सही]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="560" y="265" width="100" height="20" uuid="51d7cd02-f34c-44d7-8e09-d4b9e4399074"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[शिक्का]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="227" y="44" width="100" height="20" uuid="1f5a96e2-a31b-4615-87ff-9151a80742d6"/>
+				<text><![CDATA[नाव ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="227" y="74" width="100" height="20" uuid="d98b65a1-72ab-41b5-81ef-fa4eddadc19c"/>
+				<text><![CDATA[आईचे नाव]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="227" y="105" width="100" height="20" uuid="9306166c-37c1-4595-97f5-a22c8c49f425"/>
+				<text><![CDATA[वडीलांचे नावं]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="227" y="137" width="100" height="20" uuid="8b6eb626-9302-4ac4-a760-3f3759ea8050"/>
+				<text><![CDATA[जन्मदिनांक]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="227" y="168" width="100" height="20" uuid="496ef1d5-2b8e-4b4e-abad-ce486fa73925"/>
+				<text><![CDATA[जन्म ठिकाण]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="227" y="202" width="100" height="20" uuid="1d081079-ce85-4168-a7b2-e37fbdd4ff00"/>
+				<text><![CDATA[पत्ता]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="227" y="242" width="100" height="20" uuid="54280807-4f6c-4f56-b6e1-42bc4a4c3364"/>
+				<text><![CDATA[धर्म]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

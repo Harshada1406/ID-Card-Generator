@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Residance_Certificate" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="fe9a505a-e55d-4558-8a68-599cf4a84d7a">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="id" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     residance_certificate.`residance_certificate_id` AS residance_certificate_residance_certificate_id,
+     residance_certificate.`name` AS residance_certificate_name,
+     residance_certificate.`address` AS residance_certificate_address
+FROM
+     `residance_certificate` residance_certificate
+where
+residance_certificate_id = $P{id};]]>
+	</queryString>
+	<field name="residance_certificate_residance_certificate_id" class="java.lang.Integer"/>
+	<field name="residance_certificate_name" class="java.lang.String"/>
+	<field name="residance_certificate_address" class="java.lang.String"/>
+	<group name="residance_certificate_residance_certificate_id">
+		<groupExpression><![CDATA[$F{residance_certificate_residance_certificate_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="110" splitType="Stretch">
+			<staticText>
+				<reportElement x="273" y="38" width="299" height="57" uuid="3745089e-57bd-4b51-945c-058044eee4a5"/>
+				<textElement>
+					<font size="36"/>
+				</textElement>
+				<text><![CDATA[रहिवासी प्रमाणपत्र]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="306" y="81" width="236" height="29" uuid="69b40670-6edf-42a0-b700-868b28c02771"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[(Residance certificate)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="109" y="0" width="548" height="38" uuid="ecc5bd25-099a-4ecf-bf3d-095ab32ab1ca"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[   ग्रामपंचायत कार्यालय  -  पाडळी                    ता.   -  शिराळा                   जि. -   सांगली]]></text>
+			</staticText>
+			<image>
+				<reportElement x="167" y="24" width="94" height="71" uuid="e2a882ce-fd93-49d4-b5ac-a6491879ff43"/>
+				<imageExpression><![CDATA["C:\\Users\\hp\\Downloads\\gramp.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="192" y="0" width="267" height="20" uuid="c501b25a-db81-4e68-98a0-ae8a13264d91"/>
+				<text><![CDATA[Certificate Id]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="427" y="0" width="267" height="20" uuid="ce59d076-fbee-4e34-aa0e-156c8bb91039"/>
+				<textFieldExpression><![CDATA[$F{residance_certificate_residance_certificate_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="427" y="41" width="267" height="20" uuid="4186fcfa-cff7-4366-9c62-f9589b9d5a8a"/>
+				<textFieldExpression><![CDATA[$F{residance_certificate_name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="192" y="41" width="267" height="20" uuid="e10aa0c2-f2bd-49f2-b3b1-fffa2e4e60a9"/>
+				<text><![CDATA[Name ]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="170" splitType="Stretch">
+			<textField>
+				<reportElement x="427" y="20" width="267" height="20" uuid="ebe62ce8-0aa8-4358-b2f3-b3b8645fea77"/>
+				<textFieldExpression><![CDATA[$F{residance_certificate_address}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="192" y="20" width="267" height="20" uuid="1477362b-929d-4ff5-92f8-2590f2ac689b"/>
+				<text><![CDATA[Address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="195" y="0" width="100" height="20" uuid="e1364e03-f0ab-4825-a518-c02311fd2439"/>
+				<text><![CDATA[नाव     -]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="206" y="40" width="100" height="20" uuid="0562442e-984f-4a1c-8899-cebc68cf80ae"/>
+				<text><![CDATA[पत्ता      -]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="482" y="92" width="100" height="20" uuid="00aa3932-c735-49b2-a07a-002ede491e85"/>
+				<text><![CDATA[Sign(स्वाक्षरी)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="482" y="123" width="100" height="20" uuid="a1630175-09c5-46c5-9a78-c168debb024d"/>
+				<text><![CDATA[मुद्रांक-]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
